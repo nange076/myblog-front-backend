@@ -42,3 +42,16 @@ export function updateArticle(data) {
     data: data
   })
 }
+
+//更新文章状态
+export function  updateArticleStatus(id,status){
+  const data={
+    id,
+    status
+  }
+  return request({
+    url: '/content/article/status',
+    method: 'put',
+    data: data
+  })
+}
